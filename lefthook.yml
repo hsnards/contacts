@@ -5,7 +5,7 @@ pre-commit:
       glob: '*.{ts,tsx,js,jsx}'
       run: npm run lint
     format:
-      glob: '*.{js,jsx,ts,tsx,json,css,scss,md}'
-      run: npm run prettier --write {staged_files} && git add {staged_files}
+      glob: '*.{js,jsx,ts,tsx}'
+      run: npm run format -- {staged_files} && git add {staged_files}
     type-check:
       run: npm run type-check
